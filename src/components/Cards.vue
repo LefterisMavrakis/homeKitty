@@ -1,5 +1,5 @@
 <template>
-    <div class="cardsInner">
+    <div class="cardsContainer">
        <Card v-for="(card, index) in cards" :key="`${index}-${card.id}`" :card="card" />
     </div>
 </template>

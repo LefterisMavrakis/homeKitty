@@ -28,6 +28,7 @@
                             </svg>
                         </div>
                         <Navigation/>
+                        <MobileNav />
                         <LanguageSwitcher/>
                     </div>
                 </div>
@@ -80,6 +81,7 @@
     import Slider from "./components/Slider";
     import Cards from "./components/Cards";
     import Contact from "./components/Contact";
+    import MobileNav from "./components/MobileNav";
 
     export default {
         name: 'App',
@@ -88,7 +90,8 @@
             LanguageSwitcher,
             Slider,
             Cards,
-            Contact
+            Contact,
+            MobileNav
         },
         methods: {
             giveBodyMarginTop () {
