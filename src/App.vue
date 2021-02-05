@@ -52,7 +52,7 @@
                 <div class="constraintLg">
                     <footer class="footerInner">
                         <div class="copyrights">
-                            The standard Copyright 2020
+                            &copy; The standard Copyright 2020
                         </div>
                         <div class="gdpr">
                             Cookies | Privacy

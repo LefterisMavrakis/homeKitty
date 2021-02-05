@@ -4,24 +4,69 @@
       <div class="burgerBtnCenter" :class="{active: mobileActive}"  ></div>
     </div>
     <div class="mobileNavigationWrapper flex column" :class="{visible: mobileActive}">
-      <div class="navigationInner">
-        <nav>
-          <div v-for="(navLink, index) in navLinks"
-               class="navItem"
-               :class="{active: navLink.active}"
-               :key="`${index}-${navLink.id}`"
-               @click="handleClickNavLink(navLink)">
-            <a :href="navLink.path">{{navLink.name}}</a>
+      <div class="mobileNavigationInner">
+        <div class="navigationInner">
+          <div class="navigationHeader">
+            MENU
           </div>
-        </nav>
+          <nav>
+            <div v-for="(navLink, index) in navLinks"
+                 class="navItem"
+                 :class="{active: navLink.active}"
+                 :key="`${index}-${navLink.id}`"
+                 @click="handleClickNavLink(navLink)">
+              <a :href="navLink.path">{{navLink.name}}</a>
+            </div>
+          </nav>
+        </div>
+        <LanguageSwitcher />
+        <div class="mobileFooterWrapper">
+          <div class="socialWrapper">
+            <div class="socialInner">
+              <div class="mobileSocial">
+                <div class="socialItem">
+                  <img src="assets/social/facebook.svg" />
+                </div>
+                <div class="socialItem">
+                  <img src="assets/social/twitter.svg" />
+                </div>
+                <div class="socialItem">
+                  <img src="assets/social/Instagram.svg" />
+                </div>
+                <div class="socialItem">
+                  <img src="assets/social/browser.svg" />
+                </div>
+              </div>
+              <div class="mobileGdpr">
+                Cookies.  |  Privacy.
+              </div>
+            </div>
+          </div>
+          <div class="mobileContactInfo">
+            <div class="email">
+              S.und@themail.com
+            </div>
+            <div class="phone">
+              +30 210 1234 567
+            </div>
+          </div>
+          <div class="mobileCopyrights">
+            &copy; The standard Copyright 2020
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </template>
 
 <script>
+  import LanguageSwitcher from "./LanguageSwitcher";
   export default{
     name: 'MobileNav',
+    components:{
+      LanguageSwitcher
+    },
     data() {
       return {
         navLinks: [

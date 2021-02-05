@@ -200,12 +200,13 @@
                           value: null
                       }
                   }
-              }
+              },
+              formInitState: true
           }
         },
         computed:{
             formHasErrors: function () {
-                return this.form.name.hasError.value || this.form.email.hasError.value || this.form.phone.hasError.value || this.form.checkOptions.hasError.value
+                return (this.form.name.hasError.value || this.form.email.hasError.value || this.form.phone.hasError.value || this.form.checkOptions.hasError.value)
             }
         },
         methods: {
